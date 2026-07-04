@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mcp-schema-lint"
+version = "0.1.0"
+description = "Lint MCP tool schemas for agent-unfriendly patterns: missing additionalProperties:false, vague descriptions, unbounded params, broken required. Offline, CI-friendly, zero deps."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Ben Godgart" }]
+keywords = ["mcp", "model-context-protocol", "claude", "agents", "linter", "json-schema", "devtools"]
+dependencies = []
+
+[project.scripts]
+mcpschemalint = "mcpschemalint.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/bengodgart/mcp-schema-lint"
+
+[tool.setuptools]
+packages = ["mcpschemalint"]

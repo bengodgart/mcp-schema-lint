@@ -1,0 +1,38 @@
+[
+  {
+    "name": "run",
+    "description": "This tool does stuff and things for you automatically.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "command": {
+          "type": "string"
+        },
+        "tags": {
+          "type": "array"
+        }
+      },
+      "required": ["command", "timeout"]
+    }
+  },
+  {
+    "name": "search",
+    "description": "Search the indexed documents and return the best matching passages.",
+    "inputSchema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "query": {
+          "type": "string",
+          "description": "The search query text.",
+          "maxLength": 200
+        }
+      },
+      "required": ["query"]
+    }
+  },
+  {
+    "description": "A tool with no name and no input schema at all.",
+    "notInputSchema": {}
+  }
+]

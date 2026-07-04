@@ -1,0 +1,40 @@
+{
+  "tools": [
+    {
+      "name": "get_weather",
+      "description": "Get the current weather for a city, returning temperature in Celsius and a short conditions summary.",
+      "inputSchema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "city": {
+            "type": "string",
+            "description": "The city name to look up, for example 'Paris' or 'Tokyo'.",
+            "maxLength": 100
+          },
+          "units": {
+            "type": "string",
+            "description": "Temperature units to return.",
+            "enum": ["celsius", "fahrenheit"]
+          }
+        },
+        "required": ["city"]
+      }
+    },
+    {
+      "name": "list_reminders",
+      "description": "List the user's reminders, optionally filtered to a maximum number of results.",
+      "inputSchema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "limit": {
+            "type": "integer",
+            "description": "Maximum number of reminders to return."
+          }
+        },
+        "required": []
+      }
+    }
+  ]
+}
