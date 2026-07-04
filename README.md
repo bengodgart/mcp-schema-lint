@@ -10,7 +10,7 @@ MCP has thousands of servers, and a documented pattern of shipping tools that ar
 $ python -m mcpschemalint lint tools.json
 
 MCP schema lint
-tools: 3   errors: 4   warnings: 5   info: 2
+tools: 3   errors: 3   warnings: 5   info: 2
 
 run
   [ERROR] required-unknown-property: required lists 'timeout' but it is not in properties  (required[timeout])
